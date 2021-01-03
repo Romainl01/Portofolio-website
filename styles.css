@@ -1,5 +1,4 @@
 
-
 :root{
   --background-body : #f1f1f1;
   --dark-blue : #112c3d;
@@ -98,8 +97,8 @@ header span {
   font-weight: bold;
   font-size: 1.3rem;
   color: var(--dark-blue);
-  width: ;
 }
+
 header nav {
   align-items: center;
 }
@@ -260,8 +259,7 @@ nav a {
   margin: 0rem 2.5rem 0rem 3.5rem;
 }
 /* skills banner */
-.skills {
-}
+
 
 .coding-skills {
   width: 100%;
