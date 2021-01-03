@@ -1,3 +1,15 @@
+
+
+:root{
+  --background-body : #f1f1f1;
+  --dark-blue : #112c3d;
+}
+
+.dark-mode{
+  --background-body : #2f2f2f;
+  --dark-blue : #f1f1f1;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,17 +21,16 @@ html {
 
 body {
     font-family: "Inter", sans-serif;
-    background-color: #f1f1f1;
+    background-color: var(--background-body);
 }
 
 .margin{
     margin: 0rem 10rem;
-
 }
 
 
 h2 {
-  color: #112c3d;
+  color: var(--dark-blue);
   font-size: 2rem;
   margin: 5rem 0rem 3rem 0rem;
 }
@@ -36,12 +47,57 @@ header {
   flex-wrap: wrap;
 }
 
+
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+.label {
+	background-color: #111;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.3);
+}
+
+.label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+
+
+.fa-moon {
+	color: #f1c40f;
+}
+
+.fa-sun {
+	color: #f39c12;
+}
+
 header span {
   font-family: "Noto Serif", serif;
   font-style: normal;
   font-weight: bold;
   font-size: 1.3rem;
-  color: #112c3d;
+  color: var(--dark-blue);
   width: ;
 }
 header nav {
@@ -55,15 +111,16 @@ header ul {
 
 header li {
   align-content: center;
-  display: inline;
+  display: inline-flex;
+  margin-right: 2.2rem;
 }
 
 nav a {
   display: inline-block;
-  padding: 0.5rem 0rem 0.4rem 2.2rem;
+  padding: 0.5rem 0rem 0.4rem 0rem;
   text-decoration: none;
-  color: #112c3d;
-  font-size: 0.95rem;
+  color: var(--dark-blue);
+  font-size: 1rem;
 }
 
 .current {
@@ -127,6 +184,19 @@ nav a {
   color: #828282;
 }
 
+.hero form{
+  display: flex;
+  justify-content: between;
+  padding: 0;
+}
+#contact-form{
+  width: 40%;
+}
+
+#resume-form{
+  width: 45%;
+}
+
 .button {
   display: inline-flex;
   width: 85%;
@@ -140,16 +210,18 @@ nav a {
   align-items: center;
   font-weight: bold;
   font-size: 1.05rem;
+  cursor: pointer;
 }
+
 #contactMe {
+  width: 100%;
   background: #112c3d;
   color: #2be086;
-  width: 45%;
   border: none;
 }
 
 #resume {
-  width: 50%;
+  width: 100%;
   border: 2px solid #2be086;
 }
 
@@ -290,7 +362,7 @@ nav a {
 }
 
 .container-experiences p {
-  color: #112c3d;
+  color: --dark-blue;
   font-size: 1.35rem;
   font-weight: 600;
 }

@@ -21,8 +21,15 @@
                 <li><a href="">Projects</a></li>
                 <li><a href="">Blog</a></li>
                 <li><a href="">Contact</a></li>
+                <li><input type="checkbox" class="checkbox" id="dark-mode-checkbox" />
+                    <label class="label" for="dark-mode-checkbox">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <div class="ball"></div>
+                    </label></li>
             </ul>
         </nav>
+
     </header>
     <main>
         <div class="hero">
@@ -37,12 +44,16 @@
             <i class="fab fa-linkedin"></i>
         </div>
             <div class="button">
+                <form  method="POST" action="mailto:romainlagrange33@gmail.com" id="contact-form">
             <button id="contactMe">
                 <img src="./images/icons/mail.svg" alt="mail">
                 Contact Me</button>
-            <button id="resume">
+            </form>
+            <form method="get" action="./ressources/untitled (3).pdf" target="_blank" id="resume-form">
+            <button type="submit" id="resume">
                 <img src="./images/icons/download.svg" alt="">
-                Download CV</button>
+                Download CV</a></button>
+            </form>
             </div>
             </div>
             <div class="image-hero">
@@ -116,5 +127,6 @@
             <i class="fas fa-long-arrow-alt-up"></i>
         </button>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
