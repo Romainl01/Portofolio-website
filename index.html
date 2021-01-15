@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="./styles.css" type="text/css">
+    <link rel="shortcut icon" href="./images/icons/icon-browser.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="./styles.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <title>Romain LAGRANGE Portfolio</title>
 </head>
 <html>
 <body>
-    <div class="margin">
     <header>
+        <nav >
+            <span class="navbar-toggle" id="js-navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </span>
         <span>Romain LAGRANGE</span>
-        <nav>
-            <ul>
+            <ul class="main-nav" id="js-menu">
                 <li><a class="current" href="./homepage.html">Home</a></li>
                 <li><a href="">About</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Blog</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="">Experiences</a></li>
                 <li><input type="checkbox" class="checkbox" id="dark-mode-checkbox" />
                     <label class="label" for="dark-mode-checkbox">
                         <i class="fas fa-moon"></i>
@@ -28,9 +30,11 @@
                         <div class="ball"></div>
                     </label></li>
             </ul>
+
         </nav>
 
     </header>
+    <div class="margin1">
     <main>
         <div class="hero">
             <div class="left-hero">
@@ -40,18 +44,21 @@
             I thrive by designing and developing digital and innovative product. </p>
             <div class="followMe">
             <span id="follow">Follow Me</span>
-            <i class="fab fa-medium-m"></i>
-            <i class="fab fa-linkedin"></i>
+            <div class="icon-hero">
+            <div class="medium-hero">
+            <a href="https://medium.com/@romainlagrange33"><i class="fab fa-medium-m" id="medium-hero"></i></a>
+        </div>
+        <div class="linkedin-hero">
+            <a href="https://www.linkedin.com/in/romain-lagrange1/"><i class="fab fa-linkedin" id="linkedin-hero"></i></a>
+        </div>
+    </div>
         </div>
             <div class="button">
                 <form  method="POST" action="mailto:romainlagrange33@gmail.com" id="contact-form">
-            <button id="contactMe">
-                <img src="./images/icons/mail.svg" alt="mail">
-                Contact Me</button>
+            <button id="contactMe">Contact Me</button>
             </form>
-            <form method="get" action="./ressources/untitled (3).pdf" target="_blank" id="resume-form">
+            <form method="get" action="./ressources/CV_CESURE_V2 copie.pdf" target="_blank" id="resume-form">
             <button type="submit" id="resume">
-                <img src="./images/icons/download.svg" alt="">
                 Download CV</a></button>
             </form>
             </div>
@@ -65,7 +72,7 @@
                     <span>R</span>
                 </div>
                 <div class="quote">
-                    <p>“ I share my journey ever-learning about product development through products I'm building and startups I work in.”</p>
+                    <p>“ Here I will share my journey ever-learning about product development through products I'm building and startups I work in.”</p>
                 </div>
         </div>
         <div class="skills">
@@ -76,43 +83,35 @@
                 <i class="fab fa-js"></i>
                 <i class="fab fa-python"></i>
             </div>
+        <div class="experiences">
+            <div class="header-exp">
+            <h2>Experiences</h2>
+            <!--             <button>View More</button> -->
+
         </div>
-        <div class="projects">
-            <div class="header-project">
-            <h2>Recent projects</h2>
-            <button>View More</button>
-        </div>
-            <div class="container-projects">
-                <div class="first-project">
-                    <img src="./images/image.png" alt="">
-                    <p>First project</p>
+            <div class="container-experiences">
+                <div class="first-exp">
+                    <img src="./images/banner 3_1.png" alt="">
+                    <p> <span>Schoolab </span>, August 2020 - March 2021</p>
                 </div>
-                <div class="second-project">
-                    <img src="./images/image1.png" alt="">
-                    <p>First project</p>
+                <div class="second-exp">
+                    <p>Schoolab is an innovation studio based in Paris, San Francisco and Hô Chi Minh and founded in 2005.</p>
+                    <p>I worked in the startup accelerator department as a program manager. I was in charge of 12 startups generating between 5 and 50k monthly revenue. </p>
+                    <p><br><strong> My mains tasks:</strong></p>
+                    <ul>
+                        <li>Program Manager of the "Seed-up" acceleration program composed of 12 startups. I supported the founders on their product, roadmap, financing, structuring, and growth issues.</li>
+                    <li>Recruitment of 54 startups for incubation and acceleration programs: +300% compared to the previous season.</li>
+                 <li>Product management coaching to Sorbonne students, L'Oréal interns and participants of the "Piscine" program. </li>  
+                </ul>
+
                 </div>
             </div>
         </div>
         <div class="cta">
             <p>Interested working with me ?</p>
+            <form  method="POST" action="mailto:romainlagrange33@gmail.com" id="contact-form-cta">
             <button id="first-btn-cta">Email Me</button>
-            <button id="sec-btn-cta">See more projects</button>
-        </div>
-        <div class="experiences">
-            <div class="header-project">
-            <h2>Experiences</h2>
-            <button>View More</button>
-        </div>
-            <div class="container-experiences">
-                <div class="first-exp">
-                    <img src="./images/image.png" alt="">
-                    <p>Schoolab</p>
-                </div>
-                <div class="second-exp">
-                    <img src="./images/image1.png" alt="">
-                    <p>Loreum Ipsum</p>
-                </div>
-            </div>
+            </form>
         </div>
     </main>
 </div>
@@ -120,11 +119,10 @@
     <footer>
         <p>Let's connect</p>
         <div class="icon">
-            <i class="fab fa-medium-m"></i>
-            <i class="fab fa-linkedin"></i>
+            <a href="https://medium.com/@romainlagrange33"><i class="fab fa-medium-m"></i></a>
+            <a href="https://www.linkedin.com/in/romain-lagrange1/"><i class="fab fa-linkedin"></i></a>
         </div>
         <button id="back-to-top">Back to top 
-            <i class="fas fa-long-arrow-alt-up"></i>
         </button>
     </footer>
     <script src="script.js"></script>
