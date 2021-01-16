@@ -2,11 +2,24 @@
 :root{
   --background-body : #f1f1f1;
   --dark-blue : #112c3d;
+  --blackNav : rgba(41,41,41,.25);
+  --blackToGreen : black;
+  --darkGreyH1 : #2f2f2f;
+  --transparentToGreen: transparent; 
+  --lightGreytoMediumGrey : #e9e9e9;
+  --black : black;
 }
 
 .dark-mode{
-  --background-body : #2f2f2f;
-  --dark-blue : #f1f1f1;
+  --background-body : #18191A;
+  --dark-blue : #e9e9e9;
+  --blackNav : rgb(255,250,250, 0.25);
+  --blackToGreen : #2be086;
+  --darkGreyH1 : #e9e9e9;
+  --transparentToGreen: #2be086; 
+  --lightGreytoMediumGrey : #242526;
+  --black : #b0b3b8;
+
 }
 
 * {
@@ -53,9 +66,9 @@ header {
   position: sticky;
   top: 0;
   background-color: var(--background-body);
-  -webkit-box-shadow: 0px 0px 9px 3px rgba(41,41,41,.25);
--moz-box-shadow: 0px 0px 9px 3px rgba(41,41,41,.25);
-box-shadow: 0px 0px 9px 3px rgba(41,41,41,.25);
+  -webkit-box-shadow: 0px 0px 9px 3px var(--black);
+-moz-box-shadow: 0px 0px 9px 3px var(--blackNav);
+box-shadow: 0px 0px 9px 3px var(--blackNav);
 }
 
 nav{
@@ -221,11 +234,12 @@ li a {
   font-size: 3rem;
   line-height: 4rem;
   margin-bottom: 2rem;
-  color: #2f2f2f;
+  color: var(--darkGreyH1);
 }
 .hero p {
   font-size: 1.1rem;
   line-height: 2rem;
+  color: var(--dark-blue);
 }
 .followMe {
   width: 80%;
@@ -292,11 +306,14 @@ li a {
   background: #112c3d;
   color: #2be086;
   border: none;
+  border: 2px solid var(--transparentToGreen);
 }
 
 #resume {
   width: 100%;
   border: 2px solid #2be086;
+  background-color: transparent;
+  color: var(--blackToGreen);
 }
 
 @media screen and (max-width: 950px) {
@@ -320,40 +337,34 @@ li a {
     flex-wrap:wrap;
     text-align: center;
   }
-  .child-followMe-icon{
-    margin: 
-  }
+  
   .image-hero {
     display: none;
   }
   .button {
     margin: 0 auto;
     width: 100%;
-    padding: 0 10vw;
   }
   #contactMe {
-    padding: 1rem;
     background: #112c3d;
     color: #2be086;
     border: none;
     min-width: 17Opx;
+    padding: 1rem 2rem;
 
   }
   
   #resume {
-
-    width: content-box;
-    padding: 1rem;
     border: 2px solid #2be086;
     min-width: 17Opx;
+    padding: 1rem 2rem;
 
   }
   #contact-form, #resume-form{
-    width: 35%;
+    width: 45%;
     margin:0;
   }
 
-  
 }
 @media screen and (max-width: 600px) {
   .followMe{
@@ -377,7 +388,7 @@ margin: auto;
 
 .purpose {
   margin-top: 4rem;
-  background-color: #e9e9e9;
+  background-color: var(--lightGreytoMediumGrey);
   border-radius: 1.6rem;
   display: inline-flex;
   align-items: center;
@@ -410,12 +421,20 @@ margin: auto;
   line-height: 2.8rem;
   margin: 0rem 2.5rem 0rem 2.5rem;
 }
+
+.quote p {
+  color: var(--dark-blue);
+}
+
 @media screen and (max-width: 950px){
   .quote p {
-    font-size: 2.5vw;
+    font-size: 1.1rem;
+    padding: 1rem 0rem;
+    text-align: center;
       }
   .quote{
-    line-height: 2rem;
+    line-height: 1.7;
+    margin: 0 auto;
   }
 
   .left-r span {
@@ -423,13 +442,11 @@ margin: auto;
   }
 
   .left-r{
+    display:none;
     margin-left: 1.2rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 
-  }
-  .quote{
-    margin: 0rem 1.2rem 0rem 1.5rem
   }
 }
 /* skills banner */
@@ -440,6 +457,7 @@ margin: auto;
   font-size: 5rem;
   display: inline-flex;
   justify-content: space-around;
+  color: var( --black);
 }
 
 @media screen and (max-width: 600px){
@@ -517,17 +535,7 @@ height: auto;
   display: inline-flex;
   justify-content: space-between;
 }
-.experiences button {
-  border-radius: 0.7rem;
-  height: 2.6rem;
-  background: #112c3d;
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: #2be086;
-  border: none;
-  width: 9.4rem;
-  margin: 5rem 0rem 3rem 0rem;
-}
+
 
 .container-experiences span {
   color: --dark-blue;
@@ -538,8 +546,8 @@ height: auto;
 .container-experiences p{
   font-size: 1.1rem;
   text-align: justify;
-  line-height: 1.4;
-  color: #112c3d;
+  line-height: 1.5;
+  color: var(--dark-blue);
 }
 
 .container-experiences strong{
@@ -549,8 +557,8 @@ height: auto;
 .container-experiences li{
   font-size: 1.1rem;
   text-align: justify;
-  line-height: 1.4;
-  color: #112c3d;
+  line-height: 1.7;
+  color: var(--dark-blue);
 
 }
 
